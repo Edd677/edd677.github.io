@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Frame Moving Virtual Keyboard Project</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+
+
+<body>
+
+    <a-scene keyboard-shortcuts="enterVR: true" cursor="rayOrigin: mouse;">
+
+        <a-entity laser-controls="hand: left" raycaster="objects: .key; far: 10"></a-entity>
+        <a-entity laser-controls="hand: right" raycaster="objects: .key; far: 10"></a-entity>
+
+
+        
+        <a-entity id="keyboard" position = '-1 1.6 -1'></a-entity>
+        <a-text id="outputText" position="-0.5 1.8 -1" width="2" color="black" value=""></a-text>
+        <script src="keyboard.js"></script>
+        <script src="Movement.js"></script>
+
+    </a-scene>
+
+    
+
+
+</body>
+
+
+
+</html>
